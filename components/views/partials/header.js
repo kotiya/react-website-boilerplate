@@ -35,7 +35,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                                 <li key={`nav_${index}`}>
                                     { 
                                         !navElement.children && 
-                                            <Link href={navElement.value}>{navElement.title}</Link>
+                                            <Link href={navElement.value} legacyBehavior>{navElement.title}</Link>
                                     }
                                     
                                     {!!navElement.children && <a className="dropdown-toggle" data-toggle="dropdown" href="#">{navElement.title}<span className="caret"></span></a>}
@@ -43,7 +43,9 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                                         {
                                             navElement.children.map((child, index) => 
                                                 <li key={`child_${index}`}>
-                                                    <Link href={child.value[0] == '/' ? child.value : '/'+ child.value}>{child.title}</Link>
+                                                    <Link
+                                                        href={child.value[0] == '/' ? child.value : '/'+ child.value}
+                                                        legacyBehavior>{child.title}</Link>
                                                 </li>
                                             )
                                         }

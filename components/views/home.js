@@ -58,7 +58,7 @@ class Home extends React.Component {
                 <p className="h1">{home.call_to_action_text.value}</p>
                 <p className="h4">{home.call_to_action_subtext.value}</p>
                 <br />
-                <Link href="/contact" className="btn btn-default">{home.call_to_action_button_text.value}</Link>
+                <Link href="/contact" className="btn btn-default" legacyBehavior>{home.call_to_action_button_text.value}</Link>
             </div>
         </div>
             </div>
